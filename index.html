@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home - Photo Frames</title>
   <style>
     body {
@@ -22,6 +23,7 @@
       text-decoration: none;
       margin: 0 1.5rem;
       font-weight: bold;
+      display: inline-block;
     }
 
     nav a:hover {
@@ -52,21 +54,36 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
+    iframe {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-top: 30px;
+    }
+
     h1 {
       color: #2c3e50;
+      font-size: 2rem;
     }
 
     p {
       font-size: 18px;
       color: #555;
       line-height: 1.6;
-      margin: 0 auto;
+      margin: 0 auto 20px;
       max-width: 700px;
     }
 
     @media (max-width: 768px) {
       .image-row img {
         width: 90%;
+      }
+
+      nav a {
+        display: block;
+        margin: 0.5rem 0;
       }
     }
   </style>
@@ -82,15 +99,14 @@
   <div class="main-container">
     <h1>Welcome to Our Photo Frame Store!</h1>
     <p>Discover beautifully crafted photo frames perfect for your precious memories. Whether it's a special occasion or everyday moments, we have a frame to make them shine.</p>
-  </div>
-  <iframe width="640" height="360"
-  src="https://www.youtube.com/embed/foGyQnHw53I"
-  title="Photo Frame Demo"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen
-  style="display:block; margin: 20px auto; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
-</iframe>
 
+    <iframe 
+      src="https://www.youtube.com/embed/foGyQnHw53I"
+      title="Photo Frame Demo"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
 </body>
 </html>
