@@ -55,14 +55,21 @@
       max-width: 700px;
     }
 
-    iframe {
-      width: 100%;
-      max-width: 800px;
-      aspect-ratio: 16 / 9;
+    .video-frame {
+      width: 640px;
+      height: 360px;
+      display: block;
+      margin: 30px auto;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      margin: 30px auto;
-      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .video-frame {
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 16 / 9;
+      }
     }
 
     .image-row {
@@ -99,6 +106,7 @@
     <p>Discover beautifully crafted photo frames perfect for your precious memories. Whether it's a special occasion or everyday moments, we have a frame to make them shine.</p>
 
     <iframe 
+      class="video-frame"
       src="https://www.youtube.com/embed/foGyQnHw53I"
       title="Photo Frame Demo"
       frameborder="0"
